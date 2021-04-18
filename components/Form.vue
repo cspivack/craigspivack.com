@@ -58,27 +58,26 @@ export default {
     close () {
       this.$store.commit('form/close')
     },
-    handleSubmit() {
-      let form = this;
+    async handleSubmit() {
+      const form = this
 
-      this.loading = true;
+      form.loading = true;
 
-      let formData = new FormData(this.$refs.form);
+      const formData = new FormData(form.$refs.form);
 
-      axios.post(this.action, formData)
-         .then(function(response) {
-          form.message = response.data.message;
-          form.complete = true;
-         })
-         .catch(function(error) {
-          if(error.response.status===422) {
-            form.message = error.response.data.message;
-            form.errors = error.response.data.errors;
+      try {
+        const response = await axios.post('/', formData, {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
           }
-         })
-         .then(function(response) {
-          form.loading = false;
-         });
+        })
+        console.log(response)
+        form.complete = true
+      } catch (e) {
+        console.log(e)
+      }
+
+      form.loading = false
     },
     focus() {
       this.$refs.close.focus();
