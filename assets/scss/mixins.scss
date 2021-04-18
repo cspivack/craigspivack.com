@@ -1,0 +1,13 @@
+@mixin outer-container($width)
+{
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin media($breakpoint, $display: 'screen', $type: 'max')
+{
+    @media only #{$display} and (#{$type}-width: $breakpoint) {
+        @content;
+    }
+}
