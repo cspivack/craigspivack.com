@@ -1,5 +1,6 @@
 export const state = () => ({
-  open: false
+  open: false,
+  count: 0
 })
 
 export const mutations = {
@@ -11,9 +12,13 @@ export const mutations = {
   },
   close(state) {
     state.open = false
+  },
+  increment(state) {
+    state.count++
   }
 }
 
 export const getters = {
-  open: (state) => state.open
+  open: (state) => state.open,
+  count: (state) => state.count
 }

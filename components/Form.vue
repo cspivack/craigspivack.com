@@ -46,6 +46,7 @@ export default {
   data () {
     return {
       errors: {},
+      errorBool: false,
       message: null,
       complete: false,
       loading: false
@@ -53,12 +54,13 @@ export default {
   },
   computed: {
     hasErrors () {
-      return Object.keys(this.errors).length
+      return this.errorBool || Object.keys(this.errors).length
     }
   },
   methods: {
     close () {
       this.$store.commit('form/close')
+      this.$store.commit('form/increment')
     },
     async handleSubmit() {
       const form = this
@@ -73,10 +75,12 @@ export default {
             'Content-Type': 'application/x-www-form-urlencoded'
           }
         })
-        console.log(response)
+        form.errorBool = false
+        form.message = 'Thanks! I’ll try to get back to you as soon as possible.'
         form.complete = true
       } catch (e) {
-        console.log(e)
+        form.message = 'Hmm, there was an error with your submission. Please check your submission below and try again.'
+        form.errorBool = true
       }
 
       form.loading = false
