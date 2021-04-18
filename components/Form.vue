@@ -1,7 +1,7 @@
 <template>
   <transition name="bounce">
     <div class="modal popup">
-      <form method="POST" id="contact-form" name="contact-form" ref="form" @submit.prevent="handleSubmit" netlify>
+      <form method="POST" id="contact-form" ref="form" @submit.prevent="handleSubmit">
 
         <div class="topbar">
           <div class="title">Contact Me</div>
@@ -14,13 +14,13 @@
         <div v-if="!complete" class="form-inner">
 
           <label for="name">Name</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name">
           <small v-if="errors.name" class="error">
             {{ errors.name }}
           </small>
 
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email">
           <small v-if="errors.email" class="error">
             {{ errors.email }}
           </small>
@@ -30,6 +30,8 @@
           <small v-if="errors.message" class="error">
             {{ errors.message }}
           </small>
+
+          <input type="hidden" name="form-name" value="contact-form">
 
           <button type="submit" :disabled="loading">Send</button>
         </div>
