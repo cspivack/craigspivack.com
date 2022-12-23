@@ -1,7 +1,7 @@
 <template>
   <transition name="bounce">
     <div class="modal popup">
-      <form method="POST" id="contact-form" ref="form" @submit.prevent="handleSubmit">
+      <form method="POST" id="contact-form" ref="form" @submit.prevent="handleSubmit" novalidate>
 
         <div class="topbar">
           <div class="title">Contact Me</div>
@@ -14,19 +14,19 @@
         <div v-if="!complete" class="form-inner">
 
           <label for="name">Name</label>
-          <input type="text" name="name" id="name">
+          <input type="text" name="name" id="name" required>
           <small v-if="errors.name" class="error">
             {{ errors.name }}
           </small>
 
           <label for="email">Email</label>
-          <input type="email" name="email" id="email">
+          <input type="email" name="email" id="email" required>
           <small v-if="errors.email" class="error">
             {{ errors.email }}
           </small>
 
           <label for="message">Message</label>
-          <textarea name="message" id="message" />
+          <textarea name="message" id="message" required />
           <small v-if="errors.message" class="error">
             {{ errors.message }}
           </small>
@@ -68,6 +68,13 @@ export default {
       form.loading = true;
 
       const formData = new FormData(form.$refs.form);
+
+      const rules = {
+        name: ['required'],
+        email: ['required', 'email'],
+        message: ['required']
+      }
+
 
       try {
         const response = await axios.post('/', formData, {

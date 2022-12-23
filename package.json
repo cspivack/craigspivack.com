@@ -15,6 +15,7 @@
     "@nuxtjs/axios": "^5.13.1",
     "axios": "^0.21.1",
     "core-js": "^3.9.1",
+    "email-validator": "^2.0.4",
     "nuxt": "^2.15.3"
   },
   "devDependencies": {
