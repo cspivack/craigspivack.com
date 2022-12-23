@@ -1,7 +1,7 @@
 <template>
   <footer>
-    <nuxt-link to="/">Home</nuxt-link>
-    <button type="button" @click="toggleForm">Contact</button>
+    <nuxt-link to="/" class="button">Home</nuxt-link>
+    <button type="button" class="button" @click="toggleForm">Contact</button>
   </footer>
 </template>
 
