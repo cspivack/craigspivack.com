@@ -10,7 +10,6 @@
     <div class="bg">
       <nuxt-img
         src="/bg.jpg"
-        format="webp"
         quality="80"
         alt="Picture of a dog with its head resting on a keyboard"
       />
