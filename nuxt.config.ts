@@ -25,6 +25,7 @@ export default defineNuxtConfig({
         autoImports: ['defineStore', 'acceptHMRUpdate'],
       },
     ],
+    '@nuxt/image-edge',
   ],
   googleFonts: {
     preconnect: true,

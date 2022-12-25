@@ -8,7 +8,12 @@
       <p>I'm not the dog in the picture. His name is Kirby.</p>
     </div>
     <div class="bg">
-      <img src="/bg.jpg" alt="Picture of a dog with its head resting on a keyboard">
+      <nuxt-img
+        src="/bg.jpg"
+        format="webp"
+        quality="80"
+        alt="Picture of a dog with its head resting on a keyboard"
+      />
     </div>
   </section>
 </template>
