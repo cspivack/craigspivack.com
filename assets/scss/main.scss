@@ -46,7 +46,7 @@ button {
 }
 
 
-footer {
+#footer {
     position: fixed;
     width: 100%;
     height: 3rem;
@@ -56,6 +56,8 @@ footer {
     border-top: 1px solid #ddd;
     background: #efefef;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     .button {
         text-decoration: none;
         display: inline-block;
@@ -82,6 +84,22 @@ footer {
             min-width: initial;
         }
     }
+}
+
+#footer-left,
+#footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#footer-right {
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.75rem;
+  img {
+    display: block;
+  }
 }
 
 h1 {
