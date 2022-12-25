@@ -1,13 +1,12 @@
 <template>
   <main>
     <div class="container">
-      <Intro />
+      main blog page
     </div>
   </main>
 </template>
 
 <script setup>
-useHead({
-  title: 'craig spivack dot com'
-})
+const posts = await queryContent('/blog').find()
+console.log(posts)
 </script>

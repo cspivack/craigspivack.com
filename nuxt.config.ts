@@ -26,6 +26,7 @@ export default defineNuxtConfig({
       },
     ],
     '@nuxt/image-edge',
+    '@nuxt/content',
   ],
   googleFonts: {
     preconnect: true,
