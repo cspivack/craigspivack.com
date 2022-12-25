@@ -5,12 +5,9 @@
   </footer>
 </template>
 
-<script>
-export default {
-  methods: {
-    toggleForm () {
-      this.$store.commit('form/toggle')
-    }
-  }
+<script setup>
+const form = useForm()
+const toggleForm = () => {
+  form.toggle()
 }
 </script>

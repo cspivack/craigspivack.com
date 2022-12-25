@@ -6,8 +6,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
+<script setup>
+useHead({
+  title: 'craig spivack dot com'
+})
 </script>
