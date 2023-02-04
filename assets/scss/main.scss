@@ -52,10 +52,47 @@ button {
   @include media($xs) {
     padding: 0 1rem;
   }
-  #blog-list,
-  #article {
-    padding: 2rem 0;
-    grid-column: 5 / 9;
+}
+
+#blog-list,
+#article {
+  padding: 4rem 0 5rem;
+  grid-column: 5 / 9;
+  h1.title {
+    margin-top: 0;
+  }
+  .date {
+    font-size: 1rem;
+  }
+}
+
+#article,
+.article {
+  .title {
+    font-size: 3rem;
+    margin-bottom: 0.25em;
+  }
+}
+
+.post-body {
+  font-size: 1.375rem;
+  p {
+    line-height: 1.75;
+  }
+}
+
+#blog-list {
+  .article {
+    .title {
+      font-size: 1.75rem;
+    }
+    a {
+      color: inherit;
+    }
+  }
+  .excerpt {
+    font-size: 1.25rem;
+    margin: 0.3125em 0 0;
   }
 }
 

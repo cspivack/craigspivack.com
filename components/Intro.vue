@@ -1,7 +1,7 @@
 <template>
   <section id="intro">
     <div id="intro-inner">
-      <h1 class="title">Hi, I'm <span><em>Craig</em></span></h1>
+      <h1 class="title">Hi, I'm <em>Craig</em>.</h1>
       <p>I live in Jersey City.</p>
       <p>I work in web development (Laravel, VueJS, other stuff).</p>
       <p>I care about accessibility and I'm always trying to improve it in my projects.</p>

@@ -1,7 +1,12 @@
 <template>
   <main>
     <div class="container">
-      main blog page
+      <div id="blog-list">
+        <h1 class="title">
+          Blog
+        </h1>
+        <PostPreview v-for="post in posts" :post="post" />
+      </div>
     </div>
   </main>
 </template>

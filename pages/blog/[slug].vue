@@ -2,7 +2,7 @@
   <div class="container">
     <article id="article">
       <ContentDoc v-slot="{ doc }">
-        <h1>
+        <h1 class="title">
           {{ doc.title }}
         </h1>
         <div class="date">

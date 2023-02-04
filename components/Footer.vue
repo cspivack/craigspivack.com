@@ -2,6 +2,7 @@
   <footer id="footer">
     <div id="footer-left">
       <nuxt-link to="/" class="button">Home</nuxt-link>
+      <nuxt-link to="/blog" class="button">Blog</nuxt-link>
       <button type="button" class="button" @click="toggleForm">Contact</button>
     </div>
     <div id="footer-right">
