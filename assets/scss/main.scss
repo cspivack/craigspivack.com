@@ -45,6 +45,19 @@ button {
     transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 0 2rem;
+  @include media($xs) {
+    padding: 0 1rem;
+  }
+  #blog-list,
+  #article {
+    padding: 2rem 0;
+    grid-column: 5 / 9;
+  }
+}
 
 #footer {
     position: fixed;

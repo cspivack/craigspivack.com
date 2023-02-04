@@ -28,6 +28,9 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@nuxt/content',
   ],
+  content: {
+    documentDriven: true,
+  },
   googleFonts: {
     preconnect: true,
     prefetch: true,
