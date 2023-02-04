@@ -1,3 +1,17 @@
+@import "mixins";
+@import "variables";
+
+.title {
+    font-size: 2em;
+    margin: 0 0 1.25em;
+    span {
+        text-decoration: underline;
+    }
+    @include media($sm) {
+        margin-bottom: 1em;
+    }
+}
+
 #intro {
   width: 100%;
   height: calc(100vh - 3rem);

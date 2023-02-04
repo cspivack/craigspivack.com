@@ -102,17 +102,6 @@ button {
   }
 }
 
-h1 {
-    font-size: 2em;
-    margin: 0 0 1.25em;
-    span {
-        text-decoration: underline;
-    }
-    @include media($sm) {
-        margin-bottom: 1em;
-    }
-}
-
 p {
     line-height: 1.65;
 }
@@ -142,5 +131,4 @@ form {
     }
 }
 
-@import "intro";
 @import "form";

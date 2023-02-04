@@ -1,8 +1,6 @@
 <template>
   <main>
-    <div class="container">
-      <Intro />
-    </div>
+    <Intro />
   </main>
 </template>
 
@@ -11,3 +9,5 @@ useHead({
   title: 'craig spivack dot com'
 })
 </script>
+
+<style lang="scss" src="~/assets/scss/_intro.scss" />
