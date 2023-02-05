@@ -1,15 +1,16 @@
 ---
 title: 'Staying Updated'
-excerpt: 'Ut tincidunt vehicula diam, eu tristique enim pharetra id.'
-date: 2022-12-26
+excerpt: 'Moving to Nuxt 3 and starting my blog.'
+date: 2023-02-04
+category: learning
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at leo in est sodales facilisis. Etiam a nisi quis odio pellentesque varius et quis nibh. Ut at rutrum diam. Pellentesque dolor leo, accumsan id consequat sit amet, dignissim eget nisl.
+Working with Nuxt 3 for a project at my job motivated me to update my personal site from Nuxt 2, and that is now all set. There's a lot to learn with finally being forced into Vue's Composition API, but overall it does feel less bloated, and Vite is a noticeable upgrade.
 
-Nam non lectus lobortis, vestibulum velit a, eleifend felis. Maecenas molestie arcu sapien, vitae tincidunt nulla accumsan at.
+Since it was essentially a page one rewrite, I've decided to finally get a blog going here as well. My friends and I have talked for years about how blogging and forums need a comeback, and with Twitter being driven off a cliff I have less of an excuse than ever.
 
-Mauris ac ligula neque. In nec feugiat eros, vitae tincidunt orci. Aenean nibh mi, vehicula et risus eget, feugiat maximus elit. Praesent non pellentesque nulla.
+For the web to truly be open, people need to be able to move away from platforms and not have their "content" be monetized. Not everyone is a nerd like me and builds their own site, so it's on us as tech workers to put more power in the hands of users; not just the power to do things, but the power to control their own little space on the web.
 
-Nam commodo eu libero sit amet ornare. Sed tristique pellentesque metus eget dignissim. Phasellus condimentum laoreet urna, eget gravida ligula. Sed gravida vel enim non vulputate. Vestibulum molestie tellus eu ligula sagittis, in aliquam mauris venenatis.
+What to expect from me here? Probably the occasional post about something I've learned or what I think about the state of the internet (hint: it's not good). Right now the site is a little visually boring, so I might add some \<blink\> tags in.
 
-Sed consequat dui eu eros interdum, id rhoncus turpis vulputate. In diam ligula, condimentum eu placerat imperdiet, tincidunt quis felis. Proin lacinia arcu ut nunc tincidunt placerat. Maecenas vulputate sodales euismod. Donec mattis, libero ut porttitor euismod, lacus leo rhoncus lorem, eget luctus ex felis non turpis. Etiam sit amet nunc nec ante malesuada congue.
+<img src="/blog/under-construction.gif" alt="'Under Construction' in flames" width="256" height="192" />

@@ -12,6 +12,5 @@
 </template>
 
 <script setup>
-const posts = await queryContent('/blog').find()
-console.log(posts)
+const posts = await queryContent('/blog').sort({ date: -1 }).find()
 </script>
