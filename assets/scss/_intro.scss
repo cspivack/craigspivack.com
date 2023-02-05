@@ -1,8 +1,18 @@
+@import "mixins";
+@import "variables";
+
 #intro {
   width: 100%;
   height: calc(100vh - 3rem);
   padding: 3em calc(50% + 1.5em) 3em 3em;
   position: relative;
+  .title {
+      font-size: 2em;
+      margin: 0 0 1.25em;
+      @include media($sm) {
+          margin-bottom: 1em;
+      }
+  }
   .bg {
     width: 50%;
     height: 100%;
