@@ -13,3 +13,7 @@
     </article>
   </div>
 </template>
+
+<script setup>
+import 'victormono'
+</script>
