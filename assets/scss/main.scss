@@ -195,8 +195,36 @@ button {
   align-items: center;
   justify-content: flex-end;
   padding-right: 0.75rem;
-  img {
+  column-gap: 1rem;
+  @include media($mobile) {
+    column-gap: 0.75rem;
+  }
+  svg {
     display: block;
+  }
+  .social-link {
+    rect,
+    path {
+      transition: fill 0.15s;
+    }
+    &:hover,
+    &:focus {
+      &.rss {
+        rect {
+          fill: #F78422;
+        }
+      }
+      &.mastodon {
+        path {
+          fill: #5b4ae0;
+        }
+      }
+    }
+  }
+  .rss {
+    svg {
+      border-radius: 3px;
+    }
   }
 }
 

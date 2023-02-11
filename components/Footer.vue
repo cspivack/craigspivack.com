@@ -7,23 +7,29 @@
     </div>
     <div id="footer-right">
       <a
+        href="https://www.craigspivack.com/blog/rss.xml"
+        target="_blank"
+        aria-label="RSS feed"
+        class="social-link rss"
+      >
+        <Rss />
+      </a>
+      <a
         href="https://phpc.social/@craig"
         rel="me"
         target="_blank"
         aria-label="Mastodon profile"
+        class="social-link mastodon"
       >
-        <img
-          src="/mastodon.svg"
-          width="20"
-          height="21"
-          alt="Mastodon logo"
-        >
+        <Mastodon />
       </a>
     </div>
   </footer>
 </template>
 
 <script setup>
+import Mastodon from '~/components/Icons/Mastodon'
+import Rss from '~/components/Icons/Rss'
 const form = useForm()
 const toggleForm = () => {
   form.toggle()
