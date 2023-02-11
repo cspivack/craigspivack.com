@@ -28,6 +28,11 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@nuxt/content',
   ],
+  nitro: {
+    prerender: {
+      routes: ['/blog/rss.xml'],
+    },
+  },
   content: {
     documentDriven: true,
     highlight: {
