@@ -2,7 +2,9 @@
 title: 'Staying Updated'
 excerpt: 'Moving to Nuxt 3 and starting my blog.'
 date: 2023-02-04
-category: learning
+category:
+  - learning
+  - personal
 ---
 
 Working with Nuxt 3 for a project at my job motivated me to update my personal site from Nuxt 2, and that is now all set. There's a lot to learn with finally being forced into Vue's Composition API, but overall it does feel less bloated, and Vite is a noticeable upgrade.
@@ -13,4 +15,4 @@ For the web to truly be open, people need to be able to move away from platforms
 
 What to expect from me here? Probably the occasional post about something I've learned or what I think about the state of the internet (hint: it's not good). Right now the site is a little visually boring, so I might add some \<blink\> tags in.
 
-<img src="/blog/under-construction.gif" alt="'Under Construction' in flames" width="256" height="192" />
+!["Under Construction" in flames](/blog/under-construction.gif){width=256 height=192}

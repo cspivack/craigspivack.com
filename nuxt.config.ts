@@ -30,6 +30,10 @@ export default defineNuxtConfig({
   ],
   content: {
     documentDriven: true,
+    highlight: {
+      theme: 'monokai',
+      preload: ['nginx', 'php']
+    }
   },
   googleFonts: {
     preconnect: true,
