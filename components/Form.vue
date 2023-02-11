@@ -4,7 +4,7 @@
       <form method="POST" id="contact-form" @submit.prevent="handleSubmit" novalidate>
         <div class="topbar">
           <div class="title">Contact Me</div>
-          <button ref="closeButton" class="close" type="button" @click.prevent="close"><div></div></button>
+          <button ref="closeButton" class="close" type="button" aria-label="Close form" @click.prevent="close"><div aria-hidden="true" /></button>
         </div>
         <div v-if="message" :class="['message', (errors !== null || errorBool ? 'error' : 'success')]" v-html="message" />
         <div v-if="!complete" class="form-inner">
