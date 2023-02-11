@@ -58,12 +58,11 @@ public function index()
 {
     // ...
 
-    $urls = [];
-
-    foreach ($files as $file) {
-        $urls[] = app('files')->disk('s3')->temporaryUrl($file);
-    }
-
+    $urls = array_map(
+      fn ($file) => app('files')->disk('s3')->temporaryUrl($file),
+      $files,
+    );
+   
     // ...
 }
 ```
