@@ -87,6 +87,18 @@ button {
   }
 }
 
+#article {
+  hr {
+    height: 1px;
+    background: lighten($text, 25%);
+    border: 0;
+    margin: 1.25em 0;
+  }
+  .tags {
+    font-size: 0.75em;
+  }
+}
+
 .post-body {
   font-size: 1.375rem;
   a {
@@ -100,7 +112,7 @@ button {
     margin: 0 auto;
   }
   pre {
-    background: #2d2a2e;
+    background: #000;
     border-radius: 5px;
     padding: 1.5rem 1.75rem;
     transform: translate(-0.25rem, -0.25rem);
