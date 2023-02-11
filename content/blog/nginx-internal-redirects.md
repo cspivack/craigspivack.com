@@ -66,3 +66,9 @@ public function index()
     // ...
 }
 ```
+
+## Blog Updates
+
+I'm using the [@nuxt/content](https://content.nuxtjs.org/) module for my blog, and I've been liking it so far. I've used Prismic as the CMS for Nuxt blog sites in the past, but it's nice to be able to edit in a Markdown file.
+
+The module makes it dead-simple to set up code highlighting using [Shiki](https://github.com/shikijs/shiki). I use Sublime Text for code editing, and the code block styling here matches my personal setup: Monokai as the theme, with Victor Mono SemiBold as the font face.
