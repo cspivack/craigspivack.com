@@ -1,13 +1,14 @@
 ---
 title: 'NGINX Internal Redirects'
 excerpt: 'Displaying files outside of the web root, and doing some authentication along the way.'
-date: 2023-02-09
-category: learning
+date: 2023-02-10
+category: 
+  - learning
 ---
 
 Sometimes when building an application, you'll deal with files that you need to display to users, but you want to keep out of the public directory to ensure users are authenticated and have authorization to view the file.
 
-I'll use Laravel as an example, where a quick solution would be this in a controller:
+I work with Laravel frequently, so I'll use that as an example. A quick solution would be this method in a controller:
 
 ```php
 public function show(string $filename)
@@ -49,7 +50,7 @@ public function show(string $filename)
 
 That would give you the benefits of whatever authentication and authorization middleware you'd want to apply to this route, while avoiding the cost of actually processing the file with the application.
 
-This is an intermediate step though -- you're still dealing with booting the application, so this really only works well for a small amount of files on a single page. For dealing with an image gallery, it'd make sense to move your files to S3 or DigitalOcean Spaces and create temporary URLs instead of links to your own application's routes:
+This is an intermediate step though – unless you're running your site through an async solution like Swoole, you're still booting the framework on each request, so this really only works well for a small amount of files on a page. For dealing with an image gallery, it'd make sense to move your files to S3 or DigitalOcean Spaces and create temporary URLs instead of links to your application's routes:
 
 
 ```php
@@ -66,9 +67,3 @@ public function index()
     // ...
 }
 ```
-
-## Blog Updates
-
-I'm using the [@nuxt/content](https://content.nuxtjs.org/) module for my blog, and I've been liking it so far. I've used Prismic as the CMS for Nuxt blog sites in the past, but it's nice to be able to edit in a Markdown file.
-
-The module makes it dead-simple to set up code highlighting using [Shiki](https://github.com/shikijs/shiki). I use Sublime Text for code editing, and the code block styling here matches my personal setup: Monokai as the theme, with Victor Mono SemiBold as the font face.

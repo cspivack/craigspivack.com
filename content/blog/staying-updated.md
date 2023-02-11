@@ -2,7 +2,9 @@
 title: 'Staying Updated'
 excerpt: 'Moving to Nuxt 3 and starting my blog.'
 date: 2023-02-04
-category: learning
+category:
+  - learning
+  - personal
 ---
 
 Working with Nuxt 3 for a project at my job motivated me to update my personal site from Nuxt 2, and that is now all set. There's a lot to learn with finally being forced into Vue's Composition API, but overall it does feel less bloated, and Vite is a noticeable upgrade.
