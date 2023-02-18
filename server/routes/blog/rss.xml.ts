@@ -1,33 +1,56 @@
 import { serverQueryContent } from '#content/server'
 import RSS from 'rss'
 import { toHtml } from 'hast-util-to-html'
+import { useDateFormat } from '~/composables/useDateFormat'
+
+type BodyNode = {
+  tag: string,
+  tagName?: string,
+  type: string,
+  props?: BodyNodeProperties,
+  properties?: BodyNodeProperties,
+  children: (BodyNode | null)[],
+  value?: string
+}
+
+type BodyNodeProperties = {
+  src: string,
+  href: string,
+  lang?: string,
+  language?: string,
+  code?: string
+}
 
 const site_url = 'https://www.craigspivack.com'
 
-const updateRelativeUrls = (properties) => {
-  const props = ['src', 'href']
-
-  for (const key in properties) {
-    const val = properties[key]
-    if (props.includes(key) && val.startsWith('/')) {
-      properties[key] = site_url + val
-    }
-  }
+const updateRelativeUrls = (properties: BodyNodeProperties) => {
+  Object.entries(properties)
+    .forEach(([key, value]) => {
+      if (['src', 'href'].includes(key) && value.startsWith('/')) {
+        properties[key as keyof BodyNodeProperties] = site_url + value
+      }
+    })
 
   return properties
 }
 
-const recursivelyPatchChildren = (node) => {
+const recursivelyPatchChildren = (node: BodyNode | null) => {
+  if (node === null) {
+    return node
+  }
+
   if (node.tag === 'style') {
     return null
   } else if (node.type === 'text') {
     return node;
-  } else if (node.tag === 'code' && node.props.language) {
+  } else if (node.tag === 'code' && node.props && node.props.language) {
     node.props.lang = node.props.language
     node.children = [
       {
         type: 'text',
-        value: node.props.code
+        value: node.props.code,
+        tag: '',
+        children: []
       }
     ]
     delete node.props.language
@@ -35,7 +58,10 @@ const recursivelyPatchChildren = (node) => {
   }
 
   node.tagName = node.tag
-  node.properties = updateRelativeUrls(node.props)
+
+  if (node.props) {
+    node.properties = updateRelativeUrls(node.props)
+  }
 
   node.children = node.children.map(recursivelyPatchChildren)
 
@@ -57,10 +83,10 @@ export default defineEventHandler(async (event) => {
                         .find()
 
   for (const post of posts) {
-    post.body.children = post.body.children.map(recursivelyPatchChildren).filter(node => node !== null);
+    post.body.children = post.body.children.map(recursivelyPatchChildren).filter((node: BodyNode | null) => node !== null);
     const content = toHtml(post.body)
     feed.item({
-      title: post.title,
+      title: post.title || 'Blog Post from ' + useDateFormat(post.date),
       url: site_url + post._path,
       date: post.date,
       description: post.excerpt,
