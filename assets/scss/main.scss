@@ -76,7 +76,6 @@ button {
   }
 }
 
-#article,
 .article {
   .title {
     font-size: 3rem;
@@ -111,6 +110,14 @@ button {
     display: block;
     margin: 0 auto;
   }
+  code {
+    font-family: 'Victor Mono', sans-serif;
+    font-weight: 600;
+    font-size: 0.75em;
+    background: #eaeaea;
+    padding: 0.125em 0.3125em;
+    border-radius: 3px;
+  }
   pre {
     background: #000;
     border-radius: 5px;
@@ -120,9 +127,10 @@ button {
     overflow: auto;
     margin: 2rem 0;
     code {
-      font-family: 'Victor Mono', sans-serif;
-      font-weight: 600;
       font-size: 1rem;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
     }
   }
   h2,
