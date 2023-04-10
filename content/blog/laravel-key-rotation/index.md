@@ -6,7 +6,7 @@ category:
   - coding
 ---
 
-Today was the initial public release for [Key Rotater for Laravel](https://github.com/ivinteractive/laravel-rotation), so I'd like to explain a bit about the motivations behind the development of the package and why I think it's worth checking out.
+Today was the initial public release for [Key Rotater for Laravel](https://packagist.org/packages/ivinteractive/laravel-rotation), so I'd like to explain a bit about the motivations behind the development of the package and why I think it's worth checking out.
 
 Laravel allows for very rapid application development and has tons of functionality out of the box, but something that always bothered me was the usage of a single key for all encryption and decryption within the application without a built-in method for rotating the key in case of a breach. With compliance requirements at work necessitating having a plan in place, we had to build something to handle it.
 
