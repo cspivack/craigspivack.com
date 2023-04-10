@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <article id="article">
+    <article id="article" class="article">
       <ContentDoc v-slot="{ doc }">
         <h1 class="title">
           {{ doc.title }}

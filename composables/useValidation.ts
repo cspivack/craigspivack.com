@@ -1,14 +1,15 @@
-const checkValue = (data, key) => {
+const checkValue = (data: FormData, key: string) => {
   const value = data.get(key)
-  return value.length > 0
+  return (value || '').length > 0
 }
 
-const checkEmail = (data, key) => {
-  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.get(key))
+const checkEmail = (data: FormData, key: string) => {
+  const value = data.get(key)
+  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(<string>value || '')
 }
 
-export const useValidation = (data, rules) => {
-  const errors = {}
+export const useValidation = (data: FormData, rules: { [key: string]: string[] }) => {
+  const errors: { [key: string]: string } = {}
 
   for (const key in rules) {
     for (let r=0; r<rules[key].length; r++) {

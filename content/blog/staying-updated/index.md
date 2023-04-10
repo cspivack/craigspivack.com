@@ -3,7 +3,7 @@ title: 'Staying Updated'
 excerpt: 'Moving to Nuxt 3 and starting my blog.'
 date: 2023-02-04
 category:
-  - learning
+  - coding
   - personal
 ---
 
@@ -15,4 +15,4 @@ For the web to truly be open, people need to be able to move away from platforms
 
 What to expect from me here? Probably the occasional post about something I've learned or what I think about the state of the internet (hint: it's not good). Right now the site is a little visually boring, so I might add some \<blink\> tags in.
 
-!["Under Construction" in flames](/blog/under-construction.gif){width=256 height=192}
+!["Under Construction" in flames](/blog/2023/02/under-construction.gif){width=256 height=192}
