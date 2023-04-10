@@ -3,7 +3,7 @@ title: 'Staying Updated'
 excerpt: 'Moving to Nuxt 3 and starting my blog.'
 date: 2023-02-04
 category:
-  - learning
+  - coding
   - personal
 ---
 

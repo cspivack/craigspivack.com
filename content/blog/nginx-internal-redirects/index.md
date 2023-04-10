@@ -3,7 +3,7 @@ title: 'NGINX Internal Redirects'
 excerpt: 'Displaying files outside of the web root, and doing some authentication along the way.'
 date: 2023-02-10
 category: 
-  - learning
+  - coding
 ---
 
 Sometimes when building an application, you'll deal with files that you need to display to users, but you want to keep out of the public directory to ensure users are authenticated and have authorization to view the file.
