@@ -118,6 +118,14 @@ button {
     padding: 0.125em 0.3125em;
     border-radius: 3px;
   }
+  ul,
+  ol {
+    font-size: 0.875em;
+    line-height: 1.5;
+    li {
+      margin-top: 0.3125em;
+    }
+  }
   pre {
     background: #000;
     border-radius: 5px;
