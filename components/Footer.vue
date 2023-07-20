@@ -15,20 +15,20 @@
         <Rss />
       </a>
       <a
-        href="https://phpc.social/@craig"
+        href="https://social.craigspivack.com/@craig"
         rel="me"
         target="_blank"
-        aria-label="Mastodon profile"
-        class="social-link mastodon"
+        aria-label="Social profile"
+        class="social-link activity-pub"
       >
-        <Mastodon />
+        <ActivityPub />
       </a>
     </div>
   </footer>
 </template>
 
 <script setup>
-import Mastodon from '~/components/Icons/Mastodon'
+import ActivityPub from '~/components/Icons/ActivityPub'
 import Rss from '~/components/Icons/Rss'
 const form = useForm()
 const toggleForm = () => {
