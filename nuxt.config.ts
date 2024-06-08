@@ -2,11 +2,6 @@ import GoogleFontsModule from '@nuxtjs/google-fonts'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  vue: {
-    compilerOptions: {
-      isCustomElement: (tag) => ['rdf:RDF', 'cc:Work', 'dc:format', 'dc:type', 'dc:title', 'cc:license', 'dc:date', 'dc:creator', 'cc:Agent', 'dc:subject', 'rdf:Bag', 'rdf:li', 'cc:License', 'cc:permits'].includes(tag),
-    },
-  },
   app: {
     head: {
       htmlAttrs: {
