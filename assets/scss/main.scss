@@ -232,9 +232,8 @@ button {
   }
   .social-link {
     rect,
-    .gray,
-    .pink {
-      transition: fill 0.15s;
+    path {
+      transition: fill 0.25s;
     }
     &:hover,
     &:focus {
@@ -243,12 +242,9 @@ button {
           fill: #F78422;
         }
       }
-      &.activity-pub {
-        .gray {
-          fill: #6d6d6d !important;
-        }
-        .pink {
-          fill: #f8007c !important;
+      &.mastodon {
+        path {
+          fill: #5b4ae0;
         }
       }
     }
